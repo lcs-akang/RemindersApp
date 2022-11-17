@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            Color.yellow
+            Color.black
                 .ignoresSafeArea()
             
             VStack(spacing: 20) {
@@ -24,12 +24,22 @@ struct ContentView: View {
                         
                         
                 }
-                HStack {
-                    Image(systemName:"globe")
-                    Text("Search")
-                    Spacer()
-                        .frame(maxWidth: 275)
+                ZStack {
+                    Color.yellow
+                        .frame(maxWidth: 362, maxHeight: 35)
+                        
+                    HStack(spacing: 5) {
+                        Image(systemName:"magnifyingglass")
+                            .foregroundColor(.gray)
+                        Text("Search")
+                            .foregroundColor(.gray)
+                        Spacer()
+                            .frame(maxWidth: 265)
+                        
+                        
+                    }
                 }
+               
                 Spacer()
                 
             
